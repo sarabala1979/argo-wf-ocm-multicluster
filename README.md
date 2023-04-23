@@ -9,18 +9,18 @@ By using this project, users can propagate Argo Workflow to remote clusters base
 
 There are multiple components in this project.
 
-- Placement controller watches the Workflow CR and evaluate the [Placement](https://open-cluster-management.io/concepts/placement/) decision then annotates the Workflow with the remote cluster target.
-- ManifestWork controller watches the Workflow CR with the remote cluster target and create [ManifestWork](https://open-cluster-management.io/concepts/manifestwork/) CR which will propagate the Workflow to the intended remote cluster.
+- Placement controller watches the Workflow CR and evaluates the [Placement](https://open-cluster-management.io/concepts/placement/) decision, then annotates the Workflow with the remote cluster target.
+- ManifestWork controller watches the Workflow CR with the remote cluster target and creates [ManifestWork](https://open-cluster-management.io/concepts/manifestwork/) CR which will propagate the Workflow to the intended remote cluster.
 - Status controller that updates the Workflow CR status on the hub cluster with the remote cluster's Workflow's execution results.
-- Install Add-on that automates the installation of Argo Workflow to all the managed clusters.
+- Install Add-on that automates the installation of Argo Workflows to all the managed clusters.
 See the [Install Add-on README](addons/hub/install/README.md) for more details.
-- Workflow Status Sync Add-on that sync the entire Argo Workflow status from managed clusters to hub cluster
+- Workflow Status Sync Add-on that syncs the entire Argo Workflow status from managed clusters to hub cluster
 See the [Status Sync Add-on README](addons/hub/status_sync/README.md) for more details.
 
 See the [Workflow example](example/hello-world.yaml) for the required label(s) and annotation(s).
 
 ## Dependencies
-- The Open Cluster Management (OCM) multi-cluster environment needs to be setup. See the [OCM website](https://open-cluster-management.io/) on how to setup the environment.
+- The Open Cluster Management (OCM) multi-cluster environment needs to be set up. See the [OCM website](https://open-cluster-management.io/) on how to set up the environment.
 - In this multi-cluster model, OCM will provide the cluster inventory and ability to deliver workload to the remote/managed clusters.
 
 ## Developer Build
@@ -37,7 +37,7 @@ kind load docker-image --name=cluster1 quay.io/open-cluster-management/argo-work
 
 
 ## Getting Started
-1. Setup an OCM Hub cluster and registered at least one OCM Managed cluster.
+1. Set up an OCM Hub cluster and register at least one OCM Managed cluster.
 
 2. On the hub cluster, install the Argo Workflow and Argo Workflow Status Result CRDs:
 ```
@@ -48,10 +48,10 @@ kubectl apply -f hack/crds/
 ```
 kubectl apply -f deploy/addon/install/
 ```
-This will automate the installation of Argo Workflow to the managed clusters. See the [Install Add-on README](addons/hub/install/README.md) for more details.
-For manual installation of Argo Workflow, elevate the OCM agent permission to access 
+This will automate the installation of Argo Workflows to the managed clusters. See the [Install Add-on README](addons/hub/install/README.md) for more details.
+For manual installation of Argo Workflows, elevate the OCM agent permission to access 
 the Workflow objects by `kubectl apply -f example/managed`.
-This manual privilege escalation is not necessary when using the OCM Argo Workflow Addon.
+This manual privilege escalation is not necessary when using the OCM Argo Workflow Install Addon.
 
 4. On the hub cluster, install the OCM Argo Workflow Status Sync Addon by running:
 ```

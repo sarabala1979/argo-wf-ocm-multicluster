@@ -35,9 +35,9 @@ import (
 )
 
 const (
-	// Workflow annotation that dictates which managed cluster this Workflow should be propgated to.
+	// Workflow annotation that dictates which managed cluster this Workflow should be propagated to.
 	AnnotationKeyOCMManagedCluster = "workflows.argoproj.io/ocm-managed-cluster"
-	// Workflow annotation that dictates which managed cluster namespace this Workflow should be propgated to.
+	// Workflow annotation that dictates which managed cluster namespace this Workflow should be propagated to.
 	AnnotationKeyOCMManagedClusterNamespace = "workflows.argoproj.io/ocm-managed-cluster-namespace"
 	// ManifestWork annotation that shows the namespace of the hub Workflow.
 	AnnotationKeyHubWorkflowNamespace = "workflows.argoproj.io/ocm-hub-workflow-namespace"

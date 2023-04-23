@@ -1,5 +1,5 @@
 # Argo Workflow Status Sync Add-on
-By applying this add-on to your OCM hub cluster, the Argo Workflow status will automatically be sync back from `managed` (`spoke`) clusters to `hub` cluster.
+By applying this add-on to your OCM hub cluster, the Argo Workflow status will automatically be synced back from `managed` (`spoke`) clusters to `hub` cluster.
 
 There are two components:
 
@@ -8,7 +8,7 @@ There are two components:
 
 # Prerequisite
 
-Setup an Open Cluster Management environment. See: https://open-cluster-management.io/getting-started/quick-start/ for more details
+Set up an Open Cluster Management environment. See: https://open-cluster-management.io/getting-started/quick-start/ for more details
 
 # Get started
 

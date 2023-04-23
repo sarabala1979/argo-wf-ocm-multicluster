@@ -73,7 +73,7 @@ func (re *WorkflowPlacementReconciler) SetupWithManager(mgr ctrl.Manager) error 
 		Complete(re)
 }
 
-// Reconcile evaluates the PlacementDecision based on the Placement reference then populates the ManagedCluster annotation with the reuslt
+// Reconcile evaluates the PlacementDecision based on the Placement reference then populates the ManagedCluster annotation with the result
 func (r *WorkflowPlacementReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
 	log := log.FromContext(ctx)
 	log.Info("reconciling Workflow for Placement evaluation...")

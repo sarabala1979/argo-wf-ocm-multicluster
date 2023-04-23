@@ -1,7 +1,7 @@
 # Argo Workflow Installation Add-on
-By applying this add-on to your OCM hub cluster, the Argo Workflow installation will automatically be applied to all your existing `managed` (`spoke`) clusters and all your to be registered `managed` (`spoke`) clusters.
+By applying this add-on to your OCM hub cluster, the Argo Workflows installation will automatically be applied to all your existing `managed` (`spoke`) clusters and all your to-be-registered `managed` (`spoke`) clusters.
 
-Under the `manifests` folder it contains the Argo Workflow install version of:
+Under the `manifests` folder it contains the Argo Workflows install version of:
 
 ```
 v3.4.2
@@ -9,7 +9,7 @@ v3.4.2
 
 # Prerequisite
 
-Setup an Open Cluster Management environment. See: https://open-cluster-management.io/getting-started/quick-start/ for more details
+Set up an Open Cluster Management environment. See: https://open-cluster-management.io/getting-started/quick-start/ for more details
 
 # Get started
 

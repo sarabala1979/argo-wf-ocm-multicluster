@@ -6,10 +6,13 @@ require (
 	github.com/argoproj/argo-workflows/v3 v3.4.5
 	github.com/go-logr/logr v1.2.3
 	github.com/go-logr/zapr v1.2.3
+	github.com/onsi/ginkgo/v2 v2.1.4
+	github.com/onsi/gomega v1.19.0
 	github.com/openshift/library-go v0.0.0-20220525173854-9b950a41acdc
 	github.com/spf13/cobra v1.6.0
 	github.com/spf13/pflag v1.0.5
 	go.uber.org/zap v1.24.0
+	k8s.io/api v0.26.1
 	k8s.io/apiextensions-apiserver v0.26.1
 	k8s.io/apimachinery v0.26.1
 	k8s.io/client-go v0.26.1
@@ -121,7 +124,6 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	helm.sh/helm/v3 v3.9.4 // indirect
-	k8s.io/api v0.26.1 // indirect
 	k8s.io/apiserver v0.26.1 // indirect
 	k8s.io/kube-aggregator v0.24.0 // indirect
 	k8s.io/kube-openapi v0.0.0-20221012153701-172d655c2280 // indirect

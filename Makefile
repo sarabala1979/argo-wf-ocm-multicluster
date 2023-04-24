@@ -2,6 +2,8 @@
 IMG ?= quay.io/open-cluster-management/argo-workflow-multicluster:latest
 # ENVTEST_K8S_VERSION refers to the version of kubebuilder assets to be downloaded by envtest binary.
 ENVTEST_K8S_VERSION = 1.25.0
+# ARGO_WORKFLOWS_VERSION refers to the Argo Workflows release version
+ARGO_WORKFLOWS_VERSION = 3.4.2
 
 # Get the currently used golang install path (in GOPATH/bin, unless GOBIN is set)
 ifeq (,$(shell go env GOBIN))
@@ -101,6 +103,7 @@ endif
 
 .PHONY: install
 install: kustomize ## Install CRDs into the K8s cluster specified in ~/.kube/config.
+	kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-workflows/v${ARGO_WORKFLOWS_VERSION}/manifests/base/crds/minimal/argoproj.io_workflows.yaml
 	$(KUSTOMIZE) build config/crds | kubectl apply -f -
 
 .PHONY: uninstall

@@ -41,7 +41,8 @@ kind load docker-image --name=cluster1 quay.io/open-cluster-management/argo-work
 
 2. On the hub cluster, install the Argo Workflow and Argo Workflow Status Result CRDs:
 ```
-kubectl apply -f hack/crds/
+export ARGO_WORKFLOWS_VERSION=3.4.2 # release version
+make install
 ```
 
 3. On the hub cluster, install the OCM Argo Workflow Install Addon by running:

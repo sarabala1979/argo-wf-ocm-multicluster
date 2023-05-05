@@ -1,0 +1,6 @@
+namespace: open-cluster-management
+
+bases:
+- ../crds
+- ../rbac
+- ../manager
